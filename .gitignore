@@ -3,3 +3,4 @@
 reconboot.db
 __pycache__/
 node_modules/
+dev-frontend/

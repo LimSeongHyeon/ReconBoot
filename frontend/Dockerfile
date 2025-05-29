@@ -1,13 +1,4 @@
-FROM node:22-alpine
+FROM nginx:alpine
+COPY ./dist /usr/share/nginx/html
 
-WORKDIR /app
-
-COPY package.json yarn.lock ./
-RUN yarn install
-
-COPY . .
-
-RUN yarn build
-
-EXPOSE 5173
-CMD ["yarn", "preview"]
+EXPOSE 80
